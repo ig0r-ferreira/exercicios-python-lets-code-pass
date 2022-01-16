@@ -7,23 +7,23 @@
 """
 
 
-def somar_listas(lista1, lista2):
+def somar_listas(l1, l2):
     nova_lista = []
-    tamanho_lista1 = len(lista1)
-    tamanho_lista2 = len(lista2)
+    tamanho_l1 = len(l1)
+    tamanho_l2 = len(l2)
 
     # Se o tamanho da lista1 for maior que o da lista2 incrementa a lista2 com zeros
     # até atingir o tamanho da lista1
-    if tamanho_lista1 > tamanho_lista2:
-        lista2 = lista2 + [0] * (tamanho_lista1 - tamanho_lista2)
+    if tamanho_l1 > tamanho_l2:
+        l2 = l2 + [0] * (tamanho_l1 - tamanho_l2)
     # Se o tamanho da lista1 for menor que o da lista2 incrementa a lista1 com zeros
     # até atingir o tamanho da lista2
-    elif tamanho_lista1 < tamanho_lista2:
-        lista1 = lista1 + [0] * (tamanho_lista2 - tamanho_lista1)
-        tamanho_lista1 = len(lista1)
+    elif tamanho_l1 < tamanho_l2:
+        l1 = l1 + [0] * (tamanho_l2 - tamanho_l1)
+        tamanho_l1 = len(l1)
 
-    for i in range(tamanho_lista1):
-        nova_lista.append(lista1[i] + lista2[i])
+    for i in range(tamanho_l1):
+        nova_lista.append(l1[i] + l2[i])
 
     return nova_lista
 
