@@ -23,6 +23,14 @@ while True:
             print(f'{abre_negrito}Idade inválida! Tente novamente.{fecha_negrito}')
 
 while True:
+    sexo = input(f'Informe o seu sexo {abre_negrito}'
+                 f'(M - Masculino, F - Feminino, O - Outro){fecha_negrito}: ').strip().upper()
+    if sexo == 'M' or sexo == 'F' or sexo == 'O':
+        break
+    else:
+        print(f'{abre_negrito}Sexo inválido! Tente novamente.{fecha_negrito}')
+
+while True:
     try:
         salario = float(input('Informe o seu salário: R$ ').strip())
     except ValueError:
@@ -33,14 +41,4 @@ while True:
         else:
             print(f'{abre_negrito}Salário inválido! Tente novamente.{fecha_negrito}')
 
-while True:
-    try:
-        sexo = input(f'Informe o seu sexo {abre_negrito}'
-                     f'(M - Masculino, F - Feminino, O - Outro){fecha_negrito}: ').strip().upper()
-    except ValueError:
-        print(f'{abre_negrito}Sexo inválido! Tente novamente.{fecha_negrito}')
-    else:
-        if sexo == 'M' or sexo == 'F' or sexo == 'O':
-            break
-        else:
-            print(f'{abre_negrito}Sexo inválido! Tente novamente.{fecha_negrito}')
+print(f'Idade: {idade}\nSexo: {sexo}\nSalário: R$ {salario}')
